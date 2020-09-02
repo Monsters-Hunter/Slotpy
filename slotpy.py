@@ -1,5 +1,7 @@
 #引入套件
 import tkinter as tk
+import pandas as pd
+
 
 #建立主視窗和框架
 window = tk.Tk()                                                #創建主視窗
@@ -72,8 +74,134 @@ def dataimport():                                               #設定函數 : 
     WILD_entry3_num = int(WILD_entry3.get())
     WILD_entry4_num = int(WILD_entry4.get())
     WILD_entry5_num = int(WILD_entry5.get())
-    
 
+    #計算各輪總個數
+    #第一輪
+    wheel1=[]
+    wheel1.append(ICON1_entry1_num)
+    wheel1.append(ICON2_entry1_num)
+    wheel1.append(ICON3_entry1_num)
+    wheel1.append(ICON4_entry1_num)
+    wheel1.append(ICON5_entry1_num)
+    wheel1.append(ICON6_entry1_num)
+    wheel1.append(ICON7_entry1_num)
+    wheel1.append(SCAT_entry1_num)
+    wheel1.append(WILD_entry1_num)
+    wheel1_sum = sum(wheel1)
+    #第二輪
+    wheel2=[]
+    wheel2.append(ICON1_entry2_num)
+    wheel2.append(ICON2_entry2_num)
+    wheel2.append(ICON3_entry2_num)
+    wheel2.append(ICON4_entry2_num)
+    wheel2.append(ICON5_entry2_num)
+    wheel2.append(ICON6_entry2_num)
+    wheel2.append(ICON7_entry2_num)
+    wheel2.append(SCAT_entry2_num)
+    wheel2.append(WILD_entry2_num)
+    wheel2_sum = sum(wheel2)
+    #第三輪
+    wheel3=[]
+    wheel3.append(ICON1_entry3_num)
+    wheel3.append(ICON2_entry3_num)
+    wheel3.append(ICON3_entry3_num)
+    wheel3.append(ICON4_entry3_num)
+    wheel3.append(ICON5_entry3_num)
+    wheel3.append(ICON6_entry3_num)
+    wheel3.append(ICON7_entry3_num)
+    wheel3.append(SCAT_entry3_num)
+    wheel3.append(WILD_entry3_num)
+    wheel3_sum = sum(wheel3)
+    #第四輪
+    wheel4=[]
+    wheel4.append(ICON1_entry4_num)
+    wheel4.append(ICON2_entry4_num)
+    wheel4.append(ICON3_entry4_num)
+    wheel4.append(ICON4_entry4_num)
+    wheel4.append(ICON5_entry4_num)
+    wheel4.append(ICON6_entry4_num)
+    wheel4.append(ICON7_entry4_num)
+    wheel4.append(SCAT_entry4_num)
+    wheel4.append(WILD_entry4_num)
+    wheel4_sum = sum(wheel4)
+    #第五輪
+    wheel5=[]
+    wheel5.append(ICON1_entry5_num)
+    wheel5.append(ICON2_entry5_num)
+    wheel5.append(ICON3_entry5_num)
+    wheel5.append(ICON4_entry5_num)
+    wheel5.append(ICON5_entry5_num)
+    wheel5.append(ICON6_entry5_num)
+    wheel5.append(ICON7_entry5_num)
+    wheel5.append(SCAT_entry5_num)
+    wheel5.append(WILD_entry5_num)
+    wheel5_sum = sum(wheel5)
+
+    #DataFrame
+    wheel_table = pd.DataFrame({
+        "first": wheel1, "second":wheel2, "third":wheel3, "fourth":wheel4, "fivth":wheel5
+    }, index = [ICON1_entry0.get(),
+                ICON2_entry0.get(),
+                ICON3_entry0.get(),
+                ICON4_entry0.get(),
+                ICON5_entry0.get(),
+                ICON6_entry0.get(),
+                ICON7_entry0.get(),
+                SCAT_entry0.get(),
+                WILD_entry0.get() ])
+
+    wheelist1 = [ICON1_entry1_num + WILD_entry1_num , ICON2_entry1_num + WILD_entry1_num , ICON3_entry1_num + WILD_entry1_num ,ICON4_entry1_num + WILD_entry1_num,
+                 ICON5_entry1_num + WILD_entry1_num , ICON6_entry1_num + WILD_entry1_num , ICON7_entry1_num + WILD_entry1_num]
+    wheelist2 = [ICON1_entry2_num + WILD_entry2_num , ICON2_entry2_num + WILD_entry2_num , ICON3_entry2_num + WILD_entry2_num ,ICON4_entry2_num + WILD_entry2_num,
+                 ICON5_entry2_num + WILD_entry2_num , ICON6_entry2_num + WILD_entry2_num , ICON7_entry2_num + WILD_entry2_num]
+    wheelist3 = [ICON1_entry3_num + WILD_entry3_num , ICON2_entry3_num + WILD_entry3_num , ICON3_entry3_num + WILD_entry3_num ,ICON4_entry3_num + WILD_entry3_num,
+                 ICON5_entry3_num + WILD_entry3_num , ICON6_entry3_num + WILD_entry3_num , ICON7_entry3_num + WILD_entry3_num]
+    wheelist4 = [ICON1_entry4_num + WILD_entry4_num , ICON2_entry4_num + WILD_entry4_num , ICON3_entry4_num + WILD_entry4_num ,ICON4_entry4_num + WILD_entry4_num,
+                 ICON5_entry4_num + WILD_entry4_num , ICON6_entry4_num + WILD_entry4_num , ICON7_entry4_num + WILD_entry4_num]
+    wheelist5 = [ICON1_entry5_num + WILD_entry5_num , ICON2_entry5_num + WILD_entry5_num , ICON3_entry5_num + WILD_entry5_num ,ICON4_entry5_num + WILD_entry5_num,
+                 ICON5_entry5_num + WILD_entry5_num , ICON6_entry5_num + WILD_entry5_num , ICON7_entry5_num + WILD_entry5_num]
+
+    #WILD+各圖案數量
+    wildsum = pd.DataFrame({
+        "轉輪1":wheelist1,
+        "轉輪2":wheelist2,
+        "轉輪3":wheelist3,
+        "轉輪4":wheelist4,
+        "轉輪5":wheelist5         
+    }, index = [ICON1_entry0.get(),
+                ICON2_entry0.get(),
+                ICON3_entry0.get(),
+                ICON4_entry0.get(),
+                ICON5_entry0.get(),
+                ICON6_entry0.get(),
+                ICON7_entry0.get()
+                ])
+
+    notlist1 = [ wheel1_sum-wheelist1[0], wheel1_sum-wheelist1[1] , wheel1_sum-wheelist1[2], wheel1_sum-wheelist1[3] , wheel1_sum-wheelist1[4] , wheel1_sum-wheelist1[5], wheel1_sum-wheelist1[6]]
+    notlist2 = [ wheel2_sum-wheelist2[0], wheel2_sum-wheelist2[1] , wheel2_sum-wheelist2[2], wheel2_sum-wheelist2[3] , wheel2_sum-wheelist2[4] , wheel2_sum-wheelist2[5], wheel2_sum-wheelist2[6]]
+    notlist3 = [ wheel3_sum-wheelist3[0], wheel3_sum-wheelist3[1] , wheel3_sum-wheelist3[2], wheel3_sum-wheelist3[3] , wheel3_sum-wheelist3[4] , wheel3_sum-wheelist3[5], wheel3_sum-wheelist3[6]]
+    notlist4 = [ wheel4_sum-wheelist4[0], wheel4_sum-wheelist4[1] , wheel4_sum-wheelist4[2], wheel4_sum-wheelist4[3] , wheel4_sum-wheelist4[4] , wheel4_sum-wheelist4[5], wheel4_sum-wheelist4[6]]
+    notlist5 = [ wheel5_sum-wheelist5[0], wheel5_sum-wheelist5[1] , wheel5_sum-wheelist5[2], wheel5_sum-wheelist5[3] , wheel5_sum-wheelist5[4] , wheel5_sum-wheelist5[5], wheel5_sum-wheelist5[6]]
+
+
+    #非WILD也非各圖案
+    notwild = pd.DataFrame({
+        "非WILD數輪1":notlist1,
+        "非WILD數輪2":notlist2,
+        "非WILD數輪3":notlist3,
+        "非WILD數輪4":notlist4,
+        "非WILD數輪5":notlist5
+    }, index = [ICON1_entry0.get(),
+                ICON2_entry0.get(),
+                ICON3_entry0.get(),
+                ICON4_entry0.get(),
+                ICON5_entry0.get(),
+                ICON6_entry0.get(),
+                ICON7_entry0.get()
+                ])
+    print(wheel_table)
+    print(wildsum)
+    print(notwild)
 
 def datacalcul():
     #1
@@ -131,11 +259,40 @@ def datacalcul():
     WILD_bet4_num = int(WILD_bet4.get())
     WILD_bet5_num = int(WILD_bet5.get())
     
+    #列出組合表
+    #圖案種類
+    table_icon = []
+    for i in range(3):
+        table_icon.append(ICON1_entry0.get())
+    for i in range(3):
+        table_icon.append(ICON2_entry0.get())    
+    for i in range(3):
+        table_icon.append(ICON3_entry0.get())
+    for i in range(3):
+        table_icon.append(ICON4_entry0.get())
+    for i in range(3):
+        table_icon.append(ICON5_entry0.get())
+    for i in range(3):
+        table_icon.append(ICON6_entry0.get())
+    for i in range(3):
+        table_icon.append(ICON7_entry0.get())
+    table_icon.append(SCAT_entry0.get())
+      
+    #連線數
+    link = [5,4,3]*7+[3]
 
-# class Button:
-#     def __init__(self):
-#         self.
+    #計算出現次數
+    appear = []
 
+    #DataFrame
+    wheel_betable = pd.DataFrame({
+        "圖案名稱":table_icon,
+        "連線數":link,
+        #"出現次數":appear
+    }, index = [ "ICON1","","","ICON2","","","ICON3","","",
+                 "ICON4","","","ICON5","","","ICON6","","",
+                 "ICON7","","","SCAT"])
+    
 #建立輸入提示訊息
 tk.Label(window, text = "請輸入各ICON的名稱\n並請輸入各ICON在各轉輪的個數, 預設為0",
                  font = ("Arial",10), width = 40 , height = 5).place(x=60,y = 0)

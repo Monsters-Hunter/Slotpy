@@ -1,31 +1,7 @@
 # Slotpy : 一個簡單的RTP計算機
-*   [測試](#測試)
-123\n
-456\n
-7597\n
-46748\n
-4984\n
-4/8941\n6
-4894651\n
-sdgsdg\n
-sdgsdgh\n
-shsrdhfdn\nfg
-fggnfgjn\n
-fjdr\n
-hdr\n
-hdf
-hj
-dj
-rtjfdtj
-dftj
-rf
-j
-sdh
-sd
-hdt
-j
-dtj
-dthj
+*   [概述](#概述)
+    *   [理念](#理念)
+    *   [動機](#html)
 
 
 
@@ -33,7 +9,7 @@ dthj
 
 
 * * * 
-<h2 id="測試">測試</h2>
+<h2 id="概念">概念</h2>
 
 
 

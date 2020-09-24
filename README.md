@@ -6,14 +6,18 @@
 
 
 
+***
+流程圖
+![process chart](C:\Users\User\Desktop\輸入資料流程.jpg)
 
 
-* * * 
-概念
+*** 
+功能解說
 
 
 
 
 
-
+***
+連結
 [自製簡易RTP計算機(可印CSV檔)](https://github.com/Monsters-Hunter/Slotpy/tree/Slotpy-addPiePicture "Title")

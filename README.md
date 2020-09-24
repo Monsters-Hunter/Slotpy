@@ -8,7 +8,7 @@
 
 ***
 流程圖
-![process chart](C:\Users\User\Desktop\輸入資料流程.jpg)
+![process chart](https://upload.cc/i1/2020/09/24/yfDhCR.jpg)
 
 
 *** 

@@ -1,18 +1,18 @@
 # Slotpy : 一個簡單的RTP計算機
 *   [測試](#測試)
-123
-456
-7597
-46748
-4984
-4/89416
-4894651
-sdgsdg
-sdgsdgh
-shsrdhfdnfg
-fggnfgjn
-fjdr
-hdr
+123\n
+456\n
+7597\n
+46748\n
+4984\n
+4/8941\n6
+4894651\n
+sdgsdg\n
+sdgsdgh\n
+shsrdhfdn\nfg
+fggnfgjn\n
+fjdr\n
+hdr\n
 hdf
 hj
 dj
